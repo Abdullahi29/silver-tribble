@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://abdullahi29.github.io/silver-tribble/sitemap.xml
