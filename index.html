@@ -1,18 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Page</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Virtual Pet</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Hello, Abdullahi 🌱</h1>
-    <button id="clickBtn">Click Me</button>
+<!-- Pet Selection Screen -->
+<div id="petSelection" class="overlay">
+  <h2>Choose Your Pet 🐾</h2>
+  <div class="pet-options">
+    <button class="pet-btn" data-pet="🐶">🐶</button>
+    <button class="pet-btn" data-pet="🐱">🐱</button>
+    <button class="pet-btn" data-pet="🐰">🐰</button>
+    <button class="pet-btn" data-pet="🐹">🐹</button>
+    <button class="pet-btn" data-pet="🦊">🦊</button>
+    <button class="pet-btn" data-pet="🐻">🐻</button>
+  </div>
+</div>
 
-    <p id="message"></p>
+<!-- Main Virtual Pet Container -->
+<div id="petContainer" class="hidden">
+  <div class="pet-display">
+    <p id="petEmoji">🐶</p>
+    <p id="petMood">😊 Happy</p>
+  </div>
 
-    <script src="script.js"></script>
+  <!-- Stats Bars -->
+  <div class="stats">
+    <div class="stat">
+      <label>Hunger</label>
+      <div class="progress-bar">
+        <div id="hungerBar" class="fill"></div>
+      </div>
+    </div>
+    <div class="stat">
+      <label>Happiness</label>
+      <div class="progress-bar">
+        <div id="happinessBar" class="fill"></div>
+      </div>
+    </div>
+    <div class="stat">
+      <label>Energy</label>
+      <div class="progress-bar">
+        <div id="energyBar" class="fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Action Buttons -->
+  <div class="actions">
+    <button id="feedBtn">🍕 Feed</button>
+    <button id="playBtn">🎵 Play</button>
+    <button id="sleepBtn">💤 Sleep</button>
+  </div>
+
+  <!-- Mini Game -->
+  <div class="mini-game">
+    <h3>Catch the Treat 🎯</h3>
+    <canvas id="gameCanvas" width="400" height="200"></canvas>
+    <p id="gameScore">Score: 0</p>
+  </div>
+</div>
+
+<script src="script.js" defer></script>
 </body>
 </html>
